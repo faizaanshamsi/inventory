@@ -21,7 +21,7 @@ feature "Records a food item", %q{
       fill_in "Quantity", with: "1 barrel"
       click_on "Create Entry"
 
-      expect(page).to have_content "Entry was successfully created"
+      expect(page).to have_content "Create a New Entry"
     end
   end
 
@@ -31,7 +31,7 @@ feature "Records a food item", %q{
 
       click_on "Create Entry"
 
-      expect(page).to have_content "3 errors prevented this from being saved"
+      expect(page).to have_content "3 errors prohibited this"
     end
   end
 end
