@@ -31,10 +31,7 @@ feature "Records a food item", %q{
 
       click_on "Create Entry"
 
-      expect(page).to have_content "Title can't be blank"
-      expect(page).to have_content "Description can't be blank"
-      expect(page).to have_content "Quantity can't be blank"
+      expect(page).to have_content "3 errors prevented this from being saved"
     end
   end
-
 end

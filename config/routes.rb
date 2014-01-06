@@ -1,3 +1,3 @@
 Inventory::Application.routes.draw do
-  resources :entries, only: [:index, :new, :show]
+  resources :entries
 end

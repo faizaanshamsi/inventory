@@ -44,3 +44,5 @@ group :test, :development do
   # gem 'binding_of_caller'
   # gem 'better_errors'
 end
+
+gem 'simple_form'

@@ -1,12 +1,21 @@
 class EntriesController < ApplicationController
 
-  def index
+ def new
+    @entry = Entry.new
   end
 
-  def new
+  def create
+    @entry = Entry.new(entry_params)
+    if @entry.save
+      redirect_to new_entry_path, notice: 'Entry successfully created'
+    else
+      render :new
+    end
   end
 
-  def show
-  end
+  private
 
+  def entry_params
+    params.require(:entry).permit(:title, :description, :quantity)
+  end
 end
